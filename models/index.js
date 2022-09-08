@@ -1,6 +1,6 @@
-const Login = require("./Login");
-const Resume = require("./Resume");
-const JobSeeker = require("./JobSeeker");
+const Login = require("../Login");
+const Resume = require("../Resume");
+const JobSeeker = require("../JobSeeker");
 
 JobSeeker.HasMany(Resume);
 Resume.BelongsTo(JobSeeker);
