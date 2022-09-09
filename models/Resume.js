@@ -10,13 +10,6 @@ Resume.init(
       autoIncrement: true,
       primaryKey: true,
     },
-    jseeker_Id: {
-      type: DataTypes.INTEGER,
-      references: {
-         model: Jobseeker,
-         key: 'jseeker_Id',
-       },
-    },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -32,12 +25,12 @@ Resume.init(
       type: DataTypes.STRING,
     },
     education:{
-      type: DatatTypes.STRING,
+      type: DataTypes.STRING,
     },
     skills:{
       type: DataTypes.STRING,
       },
-    certifications: {STRING,
+    certifications: {
       type: DataTypes.STRING,
     },
   },
