@@ -29,18 +29,39 @@
 </head>
 
 <body>
-   <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/">Resume Generator</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-</body>
+  <nav class="navbar navbar-dark navbar-expand-lg bg-danger">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/"> OROX Resume Generator</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="collapse navbar-collapse justify-content-end"
+        id="navbarNavAltMarkup"
+      >
+        <div class="navbar-nav">
+          <a class="nav-link" href="/">Build a Resume</a>
+          {{#if loggedIn}}
+            <a class="nav-link" href="/logout" id="logout">Logout</a>
+            <a class="nav-link" href="/profile">My Resumes</a>
+          {{else}}
+            <a class="nav-link" href="/login">Login/Sign-up</a>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </nav>
+  {{{body}}}
+  {{#if loggedIn}}
+    <script src="/js/logout.js"></script>
+  {{/if}}
 
 </html>
