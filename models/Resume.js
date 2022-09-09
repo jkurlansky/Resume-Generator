@@ -24,10 +24,10 @@ Resume.init(
     workHistory: {
       type: DataTypes.STRING,
     },
-    education:{
+    education: {
       type: DataTypes.STRING,
     },
-    skills:{
+    skills: {
       type: DataTypes.STRING,
     },
     certifications: {
@@ -40,4 +40,3 @@ Resume.init(
 );
 
 module.exports = Resume;
-
