@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const { Model, DataTypes } = require("sequelize");
 const { sequelize } = require("../config/connection");
 
@@ -37,7 +38,7 @@ Resume.init(
       allowNull: false
     },
     jobTitle1:{
-      type: DatatTypes.STRING,
+      type: DataTypes.STRING,
       allowNull: false
     },
     companyName1:{
@@ -157,3 +158,4 @@ Resume.init(
 
 module.exports = Resume;
 
+>>>>>>> 456f502c52e9fae320dadd5af63ccfa5429570e9
