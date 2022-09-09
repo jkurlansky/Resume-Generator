@@ -1,0 +1,4 @@
+DROP DATABASE IF EXISTS new_resume;
+CREATE DATABASE new_resume;
+
+
