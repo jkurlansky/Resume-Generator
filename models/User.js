@@ -27,9 +27,9 @@ User.init(
       type: DataTypes.STRING,
     },
     lastName: {
-       type: DataTypes.STRING,
+      type: DataTypes.STRING,
     },
-    phone: { 
+    phone: {
       type: DataTypes.STRING,
     },
     address: {

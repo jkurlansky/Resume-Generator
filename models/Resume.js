@@ -19,8 +19,8 @@ Resume.init(
       },
     },
     objective: {
-        type: DataTypes.STRING,
-      },
+      type: DataTypes.STRING,
+    },
     workHistory: {
       type: DataTypes.STRING,
     },
@@ -29,7 +29,7 @@ Resume.init(
     },
     skills:{
       type: DataTypes.STRING,
-      },
+    },
     certifications: {
       type: DataTypes.STRING,
     },
