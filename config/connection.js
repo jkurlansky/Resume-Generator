@@ -15,7 +15,7 @@ if (process.env.JAWSDB_URL) {
     {
       host: "localhost",
       dialect: "mysql",
-      port: 3305,
+      port: 3005,
     }
   );
 }
@@ -35,4 +35,4 @@ const sessionConfig = {
   }),
 };
 
-module.exports = { sequelize, sessionConfig };
+module.exports = { sequelize };
