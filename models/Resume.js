@@ -5,6 +5,11 @@ class Resume extends Model {}
 
 Resume.init(
   {
+    resumeTitle: {
+      tyle: DataTypes.STRING,
+      allowNull: false
+    },
+
     name: {
       type: DataTypes.STRING,
       allowNull: false,
