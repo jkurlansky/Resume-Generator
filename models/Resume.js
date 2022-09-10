@@ -17,6 +17,11 @@ Resume.init(
          key: 'jseeker_Id',
        },
     },
+    resumeTitle: {
+      tyle: DataTypes.STRING,
+      allowNull: false
+    },
+
     name: {
       type: DataTypes.STRING,
       allowNull: false
