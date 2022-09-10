@@ -1,22 +1,11 @@
+<<<<<<< HEAD
 const { Model, DataTypes } = require("sequelize");
-const { sequelize } = require("../config/connection");
+const sequelize = require("../config/connection");
 
 class Resume extends Model {}
 
 Resume.init(
   {
-    resume_Id: {
-      type: DataTypes.INTEGER,
-      autoIncrement: true,
-      primaryKey: true,
-    },
-    jseeker_Id: {
-      type: DataTypes.INTEGER,
-      references: {
-         model: Jobseeker,
-         key: 'jseeker_Id',
-       },
-    },
     resumeTitle: {
       tyle: DataTypes.STRING,
       allowNull: false
@@ -24,7 +13,7 @@ Resume.init(
 
     name: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
     },
     email: {
       type: DataTypes.STRING,
@@ -34,78 +23,76 @@ Resume.init(
       },
     },
     phoneNumber: {
-        type: DataTypes.STRING,
-        allowNull: false
-      },
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     highlightedSkills: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
     },
-    jobTitle1:{
+    jobTitle1: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
     },
-    companyName1:{
+    companyName1: {
       type: DataTypes.STRING,
-      allowNull: false
-      },
-    jobLocation1: {STRING,
-      type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
     },
-    jobDescription1: {STRING,
+    jobLocation1: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
     },
-    startDate1: {STRING,
+    jobDescription1: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
     },
-    currentlyWorking1: {STRING,
+    startDate1: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    currentlyWorking1: {
       type: DataTypes.BOOLEAN,
     },
     endDate1: {
       type: DataTypes.STRING,
     },
-    jobTitle2: {STRING,
+    jobTitle2: {
       type: DataTypes.STRING,
     },
-    companyName2: {STRING,
+    companyName2: {
       type: DataTypes.STRING,
     },
-    jobLocation2: {STRING,
+    jobLocation2: {
       type: DataTypes.STRING,
     },
-    jobDescription2: {STRING,
+    jobDescription2: {
       type: DataTypes.STRING,
     },
-    startDate2: {STRING,
+    startDate2: {
       type: DataTypes.STRING,
-      allowNull: false
     },
-    currentlyWorking2: {STRING,
+    currentlyWorking2: {
       type: DataTypes.BOOLEAN,
     },
     endDate2: {
       type: DataTypes.STRING,
     },
-    jobTitle3: {STRING,
+    jobTitle3: {
       type: DataTypes.STRING,
     },
-    companyName3: {STRING,
+    companyName3: {
       type: DataTypes.STRING,
     },
-    jobLocation3: {STRING,
+    jobLocation3: {
       type: DataTypes.STRING,
     },
-    jobDescription3: {STRING,
+    jobDescription3: {
       type: DataTypes.STRING,
     },
-    startDate3: {STRING,
+    startDate3: {
       type: DataTypes.STRING,
-      allowNull: false
     },
-    currentlyWorking3: {STRING,
+    currentlyWorking3: {
       type: DataTypes.BOOLEAN,
     },
     endDate3: {
@@ -153,7 +140,6 @@ Resume.init(
     certDate2: {
       type: DataTypes.STRING,
     },
-
   },
   {
     sequelize,
@@ -161,4 +147,3 @@ Resume.init(
 );
 
 module.exports = Resume;
-

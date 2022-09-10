@@ -1,1 +1,2 @@
-CREATE DATABASE resume_info
+DROP DATABASE IF EXISTS resume_info;
+CREATE DATABASE resume_info;
