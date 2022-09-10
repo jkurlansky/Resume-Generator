@@ -13,7 +13,7 @@ Resume.init(
     jseeker_Id: {
       type: DataTypes.INTEGER,
       references: {
-         model: Jobseeker,
+         model: User,
          key: 'jseeker_Id',
        },
     },
@@ -156,4 +156,5 @@ Resume.init(
 );
 
 module.exports = Resume;
+
 
