@@ -59,7 +59,18 @@
         </ul>
       </div>
     </div>
-    
+    <!-- Conditionally render login or logout links -->
+    {{#if logged_in}}
+    <a href="home">Homepage</a> |
+    <button class="no-button" id="logout">logout</button>
+    {{else}}
+    <a href="/login">login</a>
+    {{/if}}
+  
+    <main class="container container-fluid mt-5">
+      <!-- Render the sub layout -->
+      {{{ body }}}
+    </main>
   </nav>
 </body>
 
