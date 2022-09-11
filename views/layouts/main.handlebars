@@ -30,7 +30,9 @@
 
 <body>
 
-  <header class="d-flex justify-content-center fs-2 text Semibold weight text.">Resume Generator </header>
+  <header class="d-flex justify-content-center fs-2 text Semibold weight text.">
+    Resume Generator 
+  </header>
 
   <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
@@ -43,32 +45,32 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
-          </li>
-        </ul>
+            <!-- Conditionally render login or logout links -->
+          {{#if logged_in}}
+          <a href="views\home.handlebars">Homepage</a> |
+          <button class="no-button" id="logout">logout</button>
+          {{else}}
+          <ul class="nav-item navbar-nav dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="/views/login.handlebars" role="button" aria-expanded="false">Login</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Separated link</a></li>
+            </ul>
+            <ul class="nav-item navbar-nav">
+              <a class="nav-link" href="#">Sign-Up</a>
+            </ul>
+          {{/if}}
+            <main class="container container-fluid mt-5">
+            <!-- Render the sub layout -->
+              {{{ body }}}
+            </main>
+          </ul>
       </div>
+      
     </div>
-    <!-- Conditionally render login or logout links -->
-    {{#if logged_in}}
-    <a href="views\home.handlebars">Homepage</a> |
-    <button class="no-button" id="logout">logout</button>
-    {{else}}
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="/views/login.handlebars" role="button" aria-expanded="false">Login</a>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
-        <li><hr class="dropdown-divider"></li>
-        <li><a class="dropdown-item" href="#">Separated link</a></li>
-      </ul>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Sign-Up</a>
-      </li>
-    {{/if}}
-    <main class="container container-fluid mt-5">
-    <!-- Render the sub layout -->
-      {{{ body }}}
-    </main>
   </nav>
 </body>
 
