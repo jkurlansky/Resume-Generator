@@ -45,7 +45,7 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
-            <!-- Conditionally render login or logout links -->
+    
           {{#if logged_in}}
           <a href="views\home.handlebars">Homepage</a> |
           <button class="no-button" id="logout">logout</button>
@@ -62,21 +62,20 @@
             <ul class="nav-item navbar-nav">
               <a class="nav-link" href="#">Sign-Up</a>
             </ul>
+
           {{/if}}
             <main class="container container-fluid mt-5">
-            <!-- Render the sub layout -->
               {{{ body }}}
             </main>
+
           </ul>
       </div>
     </div>
   </nav>
 
- <!-- Render script for logged in users only -->
   {{#if logged_in}}
   <script src="public\js\logout.js"></script>
   {{/if}}
 
 </body>
-
 </html>
