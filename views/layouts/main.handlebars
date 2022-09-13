@@ -29,47 +29,46 @@
 </head>
 
 <body>
+ <div>
+    {{!-- <header class="d-flex justify-content-center fs-2 text Semibold weight text.">
+      Resume Generator 
+    </header> --}}
 
-  <header class="d-flex justify-content-center fs-2 text Semibold weight text.">
-    Resume Generator 
-  </header>
-
-  <nav class="navbar navbar-expand-lg bg-light">
-    <div class="container-fluid">
-      <!-- <a class="navbar-brand" href="#">Resume Generator</a> -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/">Home</a>
-          </li>
-    
-          {{#if logged_in}}
-          <a href="/views/home.handlebars">Homepage</a> |
-          <button class="no-button" id="logout">logout</button>
-          {{else}}
-          <ul class="nav-link" "navbar-nav">
-            <a href="/views/login.handlebars" role="button" aria-expanded="false">Login</a>
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Resume Generator</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            {{#if logged_in}}
+            <a class="nav-link active" aria-current="page" href="/">Home</a> |
+            <button id="logout" href="/logout">logout</button>
+        
+            {{else}}
+            <ul class="nav-link" "navbar-nav">
+              <a href="/login" role="button" aria-expanded="false">Login</a>
+            </ul>
+            <ul class="nav-link" "navbar-nav">
+              <a href="/signup">Sign-Up</a>
+            </ul>
+            
           </ul>
-          <ul class="nav-link" "navbar-nav">
-            <a href="/views/sign-up.handlebars">Sign-Up</a>
-          </ul>
-
-          {{/if}}
-            <main class="container container-fluid mt-5">
-              {{{ body }}}
-            </main>
-
-          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
+    {{/if}}
+    <main class="container container-fluid mt-5">
+      {{{ body }}}
+    </main>
+  </div>
+
+   <!-- Render script for logged in users only -->
   {{#if logged_in}}
-  <script src="/public/js/logout.js"></script>
+  <script src="/js/logout.js"></script>
   {{/if}}
-
 </body>
+
 </html>
