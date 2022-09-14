@@ -42,9 +42,10 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav">
-            {{#if logged_in}}
+            {{#if loggedIn}}
             <a class="nav-link active" aria-current="page" href="/">Home</a> |
-            <button id="logout" href="/logout">logout</button>
+            <a id="logout" href="/logout">logout</a>
+      
         
             {{else}}
             <ul class="nav-link" "navbar-nav">
@@ -66,7 +67,11 @@
   </div>
 
    <!-- Render script for logged in users only -->
+<<<<<<< HEAD
   {{#if logged_in}}
+=======
+  {{#if loggedIn}}
+>>>>>>> 0ad30da436bd6958943e28035d1abc326fde3ddf
   <script src="/js/logout.js"></script>
   {{/if}}
 </body>
