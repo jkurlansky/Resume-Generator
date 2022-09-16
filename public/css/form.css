@@ -32,3 +32,31 @@ height:50px;
 .sideline:after {
     margin: 0 0 0 20px;
 }
+
+.hideJ2 {
+    display: none;
+}
+
+.hideJ3 {
+    display: none;
+}
+
+.hideEd1 {
+    display: none;
+
+}
+
+.hideEd2 {
+    display: none;
+
+}
+
+.hideC1 {
+    display: none;
+
+}
+
+.hideC2 {
+    display: none;
+
+}

@@ -18,7 +18,9 @@ router.get("/login", (req, res) => {
 router.get("/signup", (req, res) => {
   res.render("sign-up", { layout: "main" });
 });
-
+router.get("/resumebuilder", (req, res) => {
+  res.render("formfill", { layout: "main" });
+});
 router.get("/profile", withAuth, async (req, res) => {
   try {
     const userData = await User.findByPk(req.session.user_id, {
