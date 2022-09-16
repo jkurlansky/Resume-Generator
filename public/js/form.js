@@ -1,10 +1,10 @@
 //Variables
 const displayJob2Btn = document.getElementById("displayWork2");
-const displayJob3Btn = document.getElementById("displayWork3");
-const displayEd1Btn = document.getElementById("displayEd1");
-const displayEd2Btn = document.getElementById("displayEd2");
-const displayCert1Btn = document.getElementById("displayCert1");
-const displayCert2Btn = document.getElementById("displayCert2");
+const displayJob3Btn = document.getElementById(displayWork3);
+const displayEd1Btn = document.getElementById(displayEd1);
+const displayEd2Btn = document.getElementById(displayEd2);
+const displayCert1Btn = document.getElementById(displayCert1);
+const displayCert2Btn = document.getElementById(displayCert2);
 const displayJob2 = document.getElementsByClassName("hideJ2");
 const displayJob3 = document.getElementsByClassName("hideJ3");
 const displayEd1 = document.getElementsByClassName("hideEd1");
@@ -16,6 +16,7 @@ const displayCert2 = document.getElementsByClassName("hideC2");
 //Functions
 function showJob2 () {
     displayJob2.classList.remove("hideJ2");
+    console.log("This button works!");
 }
 
 function showJob3 () {
