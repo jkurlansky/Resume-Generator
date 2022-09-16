@@ -138,6 +138,13 @@ Resume.init(
     certDate2: {
       type: DataTypes.STRING,
     },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "Users",
+        key: "id",
+      },
+    },
   },
   {
     sequelize,
