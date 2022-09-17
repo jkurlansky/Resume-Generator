@@ -11,16 +11,18 @@ router.get("/", async (req, res) => {
   });
 });
 
-router.get("/login", (req, res) => {
-  res.render("login", { layout: "main" });
-});
-
 router.get("/signup", (req, res) => {
   res.render("sign-up", { layout: "main" });
 });
+
 router.get("/resumebuilder", (req, res) => {
   res.render("formfill", { layout: "main" });
 });
+
+router.get("/resumetemplate", (req, res) => {
+  res.render("resumetemplate", { layout: "main" });
+});
+
 router.get("/profile", withAuth, async (req, res) => {
   try {
     const userData = await User.findByPk(req.session.user_id, {
@@ -37,6 +39,15 @@ router.get("/profile", withAuth, async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
+});
+
+router.get("/login", (req, res) => {
+  if (req.session.logged_in) {
+    res.redirect("/profile");
+    return;
+  }
+
+  res.render("login");
 });
 
 module.exports = router;
