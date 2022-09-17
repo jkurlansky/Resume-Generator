@@ -55,3 +55,22 @@ displayCert2Btn.addEventListener("click", showCert2);
 // document
 //     .querySelector('#submitBtn')
 //     .addEventListener("submit", )
+
+const formHandler = async (event) => {
+    event.preventDefault();
+
+    const resumeTitle = document.querySelector("#resumeTitleForm").value.trim();
+    const name = document.querySelector("#nameForm").value.trim();
+    const email = document.querySelector("#emailForm").value.trim();
+    const phoneNumber = document.querySelector("#phoneNumberForm").value.trim();
+    const highlightedSkills = document.querySelector("#highlightedSkillsForm").value.trim();
+    const highlightedSkills = document.querySelector("#highlightedSkillsForm").value.trim();
+    const jobTitle1 = document.querySelector("#jobTitle1Form").value.trim();
+    const companyName1 = document.querySelector("#companyName1Form").value.trim();
+    const jobLocation1 = document.querySelector("#jobLocation1Form").value.trim();
+    const jobDescription1 = document.querySelector("#jobDescription1Form").value.trim();
+    const startDate1 = document.querySelector("#startDate1Form").value.trim();
+    const endDate1 = document.querySelector("#endDate1Form").value.trim();
+
+
+}
