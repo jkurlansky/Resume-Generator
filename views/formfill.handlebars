@@ -1,4 +1,9 @@
 <form>
+  <blockquote class="blockquote">
+  <p class="mb-0">Personal Info</p>
+  <small class="text-muted">Please leave any unused fields blank.</small>
+  </blockquote>
+  
   <div class="form-group">
     <label for="formGroupExampleInput">Resume Title</label>
     <input type="text" class="form-control" id="resumeTitleForm" placeholder="What do you want to call it?">
@@ -19,6 +24,12 @@
     <label for="formGroupExampleInput2">Key Skill Highlights</label>
     <input type="text" class="form-control" id="highlightedSkillsForm" placeholder="HTML, CSS, JS, MySQL, etc.">
   </div>
+
+{{!-- Job Experience 1 --}}
+  <blockquote class="blockquote">
+  <p class="mb-0 mt-3">Most Recent Job Experience</p>
+  </blockquote>
+
    <div class="form-group">
     <label for="formGroupExampleInput2">Job Title</label>
     <input type="text" class="form-control" id="jobTitle1Form" placeholder="Sr. Manager Boss">
@@ -32,7 +43,7 @@
     <input type="text" class="form-control" id="jobLocation1Form" placeholder="Cityville, MA">
   </div>
    <div class="form-group">
-    <label for="formGroupExampleInput2">Job Description</label>
+    <label for="exampleFormControlTextarea1">Job Description</label>
     <input type="text" class="form-control" id="jobDescription1Form" placeholder="I did things here!">
   </div>
    <div class="form-group">
@@ -44,137 +55,109 @@
     <input type="text" class="form-control" id="endDate1Form" placeholder="If you currently work here, type 'Current'.">
   </div>
 
- {{!-- Added additional employer button --}}
- <button type="button" class="btn btn-primary" id="displayWork2">Add Additional Work Experience</button>
+ {{!-- Job 2 Section --}}
+  <blockquote class="blockquote">
+  <p class="mb-0 mt-3">Secondary Job Experience</p>
+  </blockquote>
 
-   <div class="form-group hideJ2">
+   <div class="form-group ">
     <label for="formGroupExampleInput2">Job Title</label>
-    <input type="text" class="form-control hideJ2" id="jobTitle2Form" placeholder="Manager Extraordinaire">
+    <input type="text" class="form-control " id="jobTitle2Form" placeholder="Manager Extraordinaire">
   </div>
-   <div class="form-group hideJ2">
+   <div class="form-group ">
     <label for="formGroupExampleInput2">Company Name</label>
-    <input type="text" class="form-control hideJ2" id="companyName2Form" placeholder="Unreal Industries Inc.">
+    <input type="text" class="form-control" id="companyName2Form" placeholder="Unreal Industries Inc.">
   </div>
-   <div class="form-group hideJ2">
+   <div class="form-group">
     <label for="formGroupExampleInput2">Job Location</label>
-    <input type="text" class="form-control hideJ2" id="jobLocation2Form" placeholder="Smithsfield, OH">
+    <input type="text" class="form-control" id="jobLocation2Form" placeholder="Smithsfield, OH">
   </div>
-   <div class="form-group hideJ2">
+   <div class="form-group">
     <label for="formGroupExampleInput2">Job Description</label>
-    <input type="text" class="form-control hideJ2" id="jobDescription2Form" placeholder="I did other things here.">
+    <input type="text" class="form-control" id="jobDescription2Form" placeholder="I did other things here.">
   </div>
-   <div class="form-group hideJ2">
+   <div class="form-group">
     <label for="formGroupExampleInput2">Start Date</label>
-    <input type="text" class="form-control hideJ2" id="startDate2Form" placeholder="9/6/2021">
+    <input type="text" class="form-control" id="startDate2Form" placeholder="9/6/2021">
   </div>
   </div>
-   <div class="form-group hideJ2">
+   <div class="form-group">
     <label for="formGroupExampleInput2">End Date</label>
-    <input type="text" class="form-control hideJ2" id="endDate2Form" placeholder="If you currently work here, type 'Current'.">
+    <input type="text" class="form-control" id="endDate2Form" placeholder="If you currently work here, type 'Current'.">
   </div>
 
- {{!-- Added additional employer button --}}
-   <button type="button" class="btn btn-primary hideJ2" id="displayWork3">Add Additional Work Experience</button>
+ {{!-- Job 3 Section --}}
+   <blockquote class="blockquote">
+    <p class="mb-0 mt-3">Additional Job Experience</p>
+    </blockquote>
 
-
-     <div class="form-group hideJ3">
+     <div class="form-group">
     <label for="formGroupExampleInput2">Job Title</label>
-    <input type="text" class="form-control hideJ3" id="jobTitle3Form" placeholder="Manager Extraordinaire">
+    <input type="text" class="form-control" id="jobTitle3Form" placeholder="Manager Extraordinaire">
   </div>
-   <div class="form-group hideJ3">
+   <div class="form-group">
     <label for="formGroupExampleInput2">Company Name</label>
-    <input type="text" class="form-control hideJ3" id="companyName3Form" placeholder="Unreal Industries Inc.">
+    <input type="text" class="form-control" id="companyName3Form" placeholder="Unreal Industries Inc.">
   </div>
-   <div class="form-group hideJ3">
+   <div class="form-group">
     <label for="formGroupExampleInput2">Job Location</label>
-    <input type="text" class="form-control hideJ3" id="jobLocation3Form" placeholder="Smithsfield, OH">
+    <input type="text" class="form-control" id="jobLocation3Form" placeholder="Smithsfield, OH">
   </div>
    <div class="form-group hideJ3">
-    <label for="formGroupExampleInput2">Job Description</label>
-    <input type="text" class="form-control hideJ3" id="jobDescription3Form" placeholder="I did some other stuff here.">
+    <label for="exampleFormControlTextarea1">Job Description</label>
+    <input type="text" class="form-control" id="jobDescription3Form" placeholder="I did some other stuff here.">
   </div>
-   <div class="form-group hideJ3">
+   <div class="form-group">
     <label for="formGroupExampleInput2">Start Date</label>
-    <input type="text" class="form-control hideJ3" id="startDate3Form" placeholder="9/6/2021">
+    <input type="text" class="form-control" id="startDate3Form" placeholder="9/6/2021">
   </div>
   </div>
-   <div class="form-group hideJ3">
+   <div class="form-group">
     <label for="formGroupExampleInput2">End Date</label>
-    <input type="text" class="form-control hideJ3" id="endDate3Form" placeholder="If you currently work here, type 'Current'.">
+    <input type="text" class="form-control" id="endDate3Form" placeholder="If you currently work here, type 'Current'.">
   </div>
 
-   {{!-- Added education button --}}
-  <button type="button" class="btn btn-primary" id="displayEd1">Add Education</button>
+   {{!--Education 1 Section --}}
+     <blockquote class="blockquote">
+    <p class="mb-0 mt-3">Education</p>
+    </blockquote>
 
-  <div class="form-group hideEd1">
+  <div class="form-group ">
     <label for="formGroupExampleInput2">Degree Type</label>
-    <input type="text" class="form-control hideEd1" id="degreeType1Form" placeholder="Bachelor's in Science">
+    <input type="text" class="form-control" id="degreeType1Form" placeholder="Bachelor's in Science">
   </div>
-  <div class="form-group hideEd1">
+  <div class="form-group ">
     <label for="formGroupExampleInput2">School Name</label>
-    <input type="text" class="form-control hideEd1" id="schoolName1Form" placeholder="Specific University">
+    <input type="text" class="form-control" id="schoolName1Form" placeholder="Specific University">
   </div>
-  <div class="form-group hideEd1">
+  <div class="form-group ">
     <label for="formGroupExampleInput2">Start Month/Year</label>
-    <input type="text" class="form-control hideEd1" id="eStartDate1Form" placeholder="3/2018">
+    <input type="text" class="form-control" id="eStartDate1Form" placeholder="3/2018">
   </div>
-  <div class="form-group hideEd1">
+  <div class="form-group ">
     <label for="formGroupExampleInput2">End Month/Year</label>
-    <input type="text" class="form-control hideEd1" id="eEndDate1Form" placeholder="Use your estimated graduation date if currently attending.">
+    <input type="text" class="form-control" id="eEndDate1Form" placeholder="Use your estimated graduation date if currently attending.">
   </div>
 
-  {{!-- Added additional education button --}}
-  <button type="button" class="btn btn-primary hideEd1" id="displayEd2">Add Additional Education</button>
+  {{!-- Certification Section--}}
+    <blockquote class="blockquote">
+    <p class="mb-0 mt-3">Certification</p>
+    </blockquote>
 
-    <div class="form-group hideEd2">
-    <label for="formGroupExampleInput2">Degree Type</label>
-    <input type="text" class="form-control hideEd2" id="degreeType2Form" placeholder="Bachelor's in Science">
-  </div>
-  <div class="form-group hideEd2">
-    <label for="formGroupExampleInput2">School Name</label>
-    <input type="text" class="form-control hideEd2" id="schoolName2Form" placeholder="Specific University">
-  </div>
-  <div class="form-group hideEd2">
-    <label for="formGroupExampleInput2">Start Month/Year</label>
-    <input type="text" class="form-control hideEd2" id="eStartDate2Form" placeholder="3/2018">
-  </div>
-  <div class="form-group hideEd2">
-    <label for="formGroupExampleInput2">End Month/Year</label>
-    <input type="text" class="form-control hideEd2" id="eEndDate2Form" placeholder="Use your estimated graduation date if currently attending.">
-  </div>
-
-  {{!-- Added certification button --}}
-  <button type="button" class="btn btn-primary" id="displayCert1">Add Certification</button>
-
-  <div class="form-group hideC1">
+  <div class="form-group">
     <label for="formGroupExampleInput2">Certification Type</label>
-    <input type="text" class="form-control hideC1" id="certName1Form" placeholder="CompTIA A+">
+    <input type="text" class="form-control" id="certName1Form" placeholder="CompTIA A+">
   </div>
-  <div class="form-group hideC1">
+  <div class="form-group">
     <label for="formGroupExampleInput2">Issuing Organization</label>
-    <input type="text" class="form-control hideC1" id="certOrg1Form" placeholder="CompTIA">
+    <input type="text" class="form-control col-sm-12" id="certOrg1Form" placeholder="CompTIA">
   </div>
-  <div class="form-group hideC1">
+  <div class="form-group">
     <label for="formGroupExampleInput2">Issued Month/Year</label>
-    <input type="text" class="form-control hideC1" id="certDate1Form" placeholder="2/2019">
-
-    {{!-- Added additional certification button --}}
-  <button type="button" class="btn btn-primary hideC1" id="displayCert2">Add Additional Certification</button>
+    <input type="text" class="form-control" id="certDate1Form" placeholder="2/2019">
 
 
-  </div class="form-group hideC2">
-      <label for="formGroupExampleInput2">Certification Type</label>
-    <input type="text" class="form-control hideC2" id="certName2Form" placeholder="CompTIA A+">
-  </div>
-  <div class="form-group hideC2">
-    <label for="formGroupExampleInput2">Issuing Organization</label>
-    <input type="text" class="form-control hideC2" id="certOrg2Form" placeholder="CompTIA">
-  </div>
-  <div class="form-group hideC2">
-    <label for="formGroupExampleInput2">Issued Month/Year</label>
-    <input type="text" class="form-control hideC2" id="certDate2Form" placeholder="2/2019">
-  </div>
+  <button type="button" class="btn btn-primary mt-3" id="submitBtn">Submit</button>
 
-  <button type="button" class="btn btn-primary" id="submitBtn">Submit</button>
 
 </form>
