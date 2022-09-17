@@ -1,0 +1,118 @@
+/* login_hb */
+.form-style input{
+	border:0;
+	height:50px;
+	border-radius:0;
+  border-bottom:1px solid #ebebeb;	
+}
+.form-style input:focus{
+  border-bottom:1px solid #007bff;	
+  box-shadow:none;
+  outline:0;
+  background-color:#ebebeb;	
+}
+.sideline {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+	 color:#ccc;
+}
+button{
+  height:50px;	
+}
+.sideline:before,
+.sideline:after {
+    content: '';
+    border-top: 1px solid #ebebeb;
+    margin: 0 20px 0 0;
+    flex: 1 0 20px;
+}
+
+.sideline:after {
+    margin: 0 0 0 20px;
+}
+
+/* formfill_hb */
+.hideJ2 {
+    display: none;
+}
+
+.hideJ3 {
+    display: none;
+}
+
+.hideEd1 {
+    display: none;
+
+}
+
+.hideEd2 {
+    display: none;
+
+}
+
+.hideC1 {
+    display: none;
+
+}
+
+.hideC2 {
+    display: none;
+
+}
+
+
+/* home_hb */
+
+header.masthead {
+    position: relative;
+    overflow: hidden;
+    padding-top: calc(4rem + 60px);
+    padding-bottom: 4rem;
+    background: linear-gradient(0deg, #ff6a00 0%, #ee0979 100%);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+  }
+  header.masthead .masthead-content {
+    z-index: 1;
+    position: relative;
+  }
+  header.masthead .masthead-content .masthead-heading {
+    font-size: 4rem;
+  }
+  header.masthead .masthead-content .masthead-subheading {
+    font-size: 2rem;
+  }
+  header.masthead .bg-circle {
+    z-index: 0;
+    position: absolute;
+    border-radius: 100%;
+    background: linear-gradient(0deg, #ee0979 0%, #ff6a00 100%);
+  }
+  header.masthead .bg-circle-1 {
+    height: 90rem;
+    width: 90rem;
+    bottom: -55rem;
+    left: -55rem;
+  }
+  header.masthead .bg-circle-2 {
+    height: 50rem;
+    width: 50rem;
+    top: -25rem;
+    right: -25rem;
+  }
+  header.masthead .bg-circle-3 {
+    height: 20rem;
+    width: 20rem;
+    bottom: -10rem;
+    right: 5%;
+  }
+  header.masthead .bg-circle-4 {
+    height: 30rem;
+    width: 30rem;
+    top: -5rem;
+    right: 35%;
+  }
