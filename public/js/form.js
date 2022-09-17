@@ -12,7 +12,7 @@ const displayEd2 = document.getElementsByClassName("hideEd2");
 const displayCert1 = document.getElementsByClassName("hideC1");
 const displayCert2 = document.getElementsByClassName("hideC2");
 
-//Functions
+Functions;
 function showJob2() {
   displayJob2.classList.remove("hideJ2");
   console.log("This button works!");
@@ -47,6 +47,7 @@ displayCert1Btn.addEventListener("click", showCert1);
 displayCert2Btn.addEventListener("click", showCert2);
 
 const handleSubmit = async (event) => {
+  console.log("hello");
   event.preventDefault();
   const resumeTitle = document.querySelector("#resumeTitleForm").value.trim();
   const username = document.querySelector("#nameForm").value.trim();
@@ -104,4 +105,4 @@ const handleSubmit = async (event) => {
 
 document
   .querySelector(".newResumeForm")
-  .addEventListener("click", handleSubmit);
+  .addEventListener("submit", handleSubmit());
