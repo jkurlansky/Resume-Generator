@@ -19,8 +19,24 @@ router.get("/resumebuilder", (req, res) => {
   res.render("formfill", { layout: "main" });
 });
 
-router.get("/resumetemplate", (req, res) => {
-  res.render("resumetemplate", { layout: "main" });
+router.get("/resumetemplate", async (req, res) => {
+  try {
+    const resumeData = await Resume.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ["name"],
+        },
+      ],
+    });
+    const resume = resumeData.get({ plain: true });
+    res.render("resumetemplate", {
+      ...resume,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 router.get("/profile", withAuth, async (req, res) => {
