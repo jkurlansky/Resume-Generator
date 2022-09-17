@@ -19,10 +19,10 @@ router.post("/signup", async (req, res) => {
 });
 
 router.post("/login", async (req, res) => {
-  console.log(req.body,"Login")
+  console.log(req.body, "Login");
   try {
     const userData = await User.findOne({ where: { email: req.body.email } });
-     console.log("User login",userData);
+
     if (!userData) {
       res
         .status(400)
@@ -47,7 +47,7 @@ router.post("/login", async (req, res) => {
       res.json({ user: userData, message: "You are now logged in!" });
     });
   } catch (err) {
-    console.log("Err",err);
+    console.log("Err", err);
     res.status(400).json(err);
   }
 });
@@ -61,8 +61,5 @@ router.post("/logout", (req, res) => {
     res.status(404).end();
   }
 });
-
-
-
 
 module.exports = router;
