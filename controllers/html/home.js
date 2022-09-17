@@ -18,9 +18,38 @@ router.get("/login", (req, res) => {
 router.get("/signup", (req, res) => {
   res.render("sign-up", { layout: "main" });
 });
+
 router.get("/resumebuilder", (req, res) => {
-  res.render("formfill", { layout: "main" });
+  const loggedIn = req.session.logged_in;
+  console.log("loggedIn", loggedIn);
+
+  res.render("formfill", {
+    loggedIn,
+  });
 });
+
+router.get("/resume", async (req, res) => {
+  try {
+    const resumeData = await Resume.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ["name"],
+        },
+      ],
+    });
+
+    const resume = resumeData.get({ plain: true });
+
+    res.render("resumetemplate", {
+      ...resume,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 router.get("/profile", withAuth, async (req, res) => {
   try {
     const userData = await User.findByPk(req.session.user_id, {
@@ -32,7 +61,7 @@ router.get("/profile", withAuth, async (req, res) => {
 
     res.render("profile", {
       ...user,
-      loggedIn: req.session.loggedIn,
+      loggedIn: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);

@@ -10,14 +10,14 @@
   </div>
   <button type="button" class="btn btn-primary btn-lg" id="resume-form">Begin</button>
 
- {{#if resume-list.length}}
+ {{#if Resumes.length}}
   <div class="col-md-6 resume-list">
     <h3>Your Resumes</h3>
 
-    {{#each resume-list as |Resume|}}
+    {{#each resume as |resume|}}
     <div class="row mb-2">
       <div class="col-md-8">
-        <h4><a href="/project/{{Resume.id}}">{{Resume.name}}</a></h4>
+        <h4><a href="/resume/{{Resume.id}}">{{Resume.name}}</a></h4>
       </div>
       <div class="col-md-4">
         <button class="btn btn-sm btn-danger" data-id="{{Resume}}">DELETE</button>

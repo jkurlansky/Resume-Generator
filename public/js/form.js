@@ -64,32 +64,45 @@ const handleSubmit = async (event) => {
   const startDate1 = document.querySelector("#startDate1Form").value.trim();
   const endDate1 = document.querySelector("#endDate1Form").value.trim();
 
-  const response = await fetch("/api/resume", {
-    method: "POST",
-    body: JSON.stringify({
-      resumeTitle,
-      username,
-      email,
-      phoneNumber,
-      highlightedSkills,
-      jobTitle1,
-      companyName1,
-      jobLocation1,
-      jobDescription1,
-      startDate1,
-      endDate1,
-    }),
-    headers: { "Content-Type": "application/json" },
-  });
+  if (
+    resumeTitle &&
+    username &&
+    email &&
+    phoneNumber &&
+    highlightedSkills &&
+    jobTitle1 &&
+    companyName1 &&
+    jobLocation1 &&
+    jobDescription1 &&
+    startDate1 &&
+    endDate1
+  ) {
+    const response = await fetch("/api/resume", {
+      method: "POST",
+      body: JSON.stringify({
+        resumeTitle,
+        username,
+        email,
+        phoneNumber,
+        highlightedSkills,
+        jobTitle1,
+        companyName1,
+        jobLocation1,
+        jobDescription1,
+        startDate1,
+        endDate1,
+      }),
+      headers: { "Content-Type": "application/json" },
+    });
 
-  if (response.ok) {
-    console.log("stuff");
-    document.location.replace("/resumetemplates");
-  } else {
-    alert("Failed template");
+    if (response.ok) {
+      console.log("you did it!");
+    } else {
+      alert("Failed template");
+    }
   }
 };
 
 document
   .querySelector(".newResumeForm")
-  .addEventListener("click", handleSubmit);
+  .addEventListener("submit", handleSubmit);
